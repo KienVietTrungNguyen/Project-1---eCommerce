@@ -14,13 +14,12 @@ WHERE _table_suffix BETWEEN '0101' AND '0331'
 GROUP BY month
 ORDER BY month;
 ```
-## 📊 Query Result
-
 | month  | visits | pageviews | transactions |
 |--------|--------|-----------|--------------|
 | 201701 | 64694  | 257708    | 713          |
 | 201702 | 62192  | 233373    | 733          |
 | 201703 | 69931  | 259522    | 993          |
+
 March 2017 shows a significant improvement in all metrics ( visits, pageviews, and transactions) compared to January and February
 ## Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 
