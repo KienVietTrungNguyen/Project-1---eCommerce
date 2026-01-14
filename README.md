@@ -27,16 +27,20 @@ In this project, I will write 08 query in Bigquery base on Google Analytics data
 
 March 2017 shows a significant improvement in all metrics ( visits, pageviews, and transactions) compared to January and February
 ## Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
-```sql
-SELECT
-    trafficSource.source as source,
-    SUM(totals.visits) as total_visits,
-    SUM(totals.Bounces) as total_no_of_bounces,
-    (SUM(totals.Bounces)/SUM(totals.visits))* 100.00 as bounce_rate
-FROM `bigquery-public-data.google_analytics_sample.ga_sessions_201707*`
-GROUP BY source
-ORDER BY total_visits DESC;
-```
+- SQL code
+<img width="786" height="162" alt="Image" src="https://github.com/user-attachments/assets/75920684-bc5e-4260-af5f-cd217e0ec931" />
 
+- Query results
+<img width="788" height="536" alt="Image" src="https://github.com/user-attachments/assets/1ac4919d-ea51-44f8-a998-0690dac8be25" />
+
+## Query 3: Revenue by traffic source by week, by month in June 2017
+- SQL code
+<img width="772" height="637" alt="Image" src="https://github.com/user-attachments/assets/984fc33a-7c3e-4142-8192-9d5dfa7a17d5" />
+
+- Query results
+<img width="983" height="707" alt="Image" src="https://github.com/user-attachments/assets/fadc1699-ff44-4390-bbf0-6ec48e9dc778" />
+
+
+    
 
 
